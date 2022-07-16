@@ -7,9 +7,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Category {
+public class UnitOfMensurement {
 
     private Integer id;
-    private String name;
-
+    private String unit;
 }

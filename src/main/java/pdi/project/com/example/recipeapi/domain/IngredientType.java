@@ -7,9 +7,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Category {
+public class IngredientType {
 
     private Integer id;
     private String name;
-
 }

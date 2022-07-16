@@ -7,9 +7,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Category {
+public class StepInstruction {
 
     private Integer id;
-    private String name;
+    private Integer step;
+    private String unit;
 
 }

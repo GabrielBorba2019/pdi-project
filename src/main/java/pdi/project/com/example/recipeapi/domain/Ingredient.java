@@ -7,9 +7,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Category {
+public class Ingredient {
 
     private Integer id;
     private String name;
-
+    private IngredientType type;
+    private UnitOfMensurement measure;
+    private String measureQuanity;
 }
