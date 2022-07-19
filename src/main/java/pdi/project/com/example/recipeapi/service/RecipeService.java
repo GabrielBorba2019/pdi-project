@@ -1,2 +1,4 @@
-package pdi.project.com.example.recipeapi.service;public interface RecipeService {
+package pdi.project.com.example.recipeapi.service;
+
+public interface RecipeService {
 }
