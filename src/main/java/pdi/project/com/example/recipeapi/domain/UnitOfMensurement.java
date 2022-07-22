@@ -9,6 +9,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UnitOfMensurement {
 
-    private Integer id;
+    private Long id;
     private String unit;
 }

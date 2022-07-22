@@ -4,14 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
 public class StepInstruction {
 
-    private Integer id;
-    private Integer step;
-    private String unit;
-
+  private Long id;
+  private Integer step;
+  private String instruction;
 }

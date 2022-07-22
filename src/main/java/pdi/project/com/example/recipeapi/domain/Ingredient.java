@@ -9,9 +9,9 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Ingredient {
 
-    private Integer id;
+    private Long id;
     private String name;
     private IngredientType type;
     private UnitOfMensurement measure;
-    private String measureQuanity;
+    private String quantity;
 }

@@ -13,13 +13,13 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Recipe {
 
-  private Integer id;
+  private Long id;
   private String name;
   private Category category;
   private SubCategory subCategory;
-  private List<Ingredient> ingredientst;
+  private List<Ingredient> ingredients;
   private List<StepInstruction> stepInstructions;
-  private Time preperTime;
+  private Time prepareTime;
   private Integer yield;
   private Date date;
 }
