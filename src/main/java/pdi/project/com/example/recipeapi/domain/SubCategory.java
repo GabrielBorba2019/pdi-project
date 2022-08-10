@@ -11,6 +11,5 @@ public class SubCategory {
 
     private Long id;
     private String name;
-    private Category category;
 
 }

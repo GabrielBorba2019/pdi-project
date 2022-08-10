@@ -7,5 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class RecipeApiApplicationTests {
 
   @Test
-  void contextLoads() {}
+  void main() {
+    RecipeApiApplication.main(new String[] {});
+  }
 }
