@@ -15,4 +15,6 @@ public class StepInstruction {
   private Integer step;
   private String instruction;
 
+  public StepInstruction(Object o) {
+  }
 }

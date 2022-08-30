@@ -1,11 +1,10 @@
 package pdi.project.com.example.recipeapi.domain;
 
+import java.util.Optional;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Optional;
 
 @Getter
 @Setter
@@ -13,9 +12,8 @@ import java.util.Optional;
 @NoArgsConstructor
 public class IngredientType {
 
-    private Long id;
-    private String name;
+  private Long id;
+  private String name;
 
-    public IngredientType(Optional<IngredientType> byId) {
-    }
+  public IngredientType(Optional<IngredientType> byId) {}
 }

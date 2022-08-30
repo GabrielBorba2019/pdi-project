@@ -7,5 +7,5 @@ import lombok.*;
 @AllArgsConstructor
 public class StepInstructionDTO {
 
-    public String instruction;
+  public String instruction;
 }

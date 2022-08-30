@@ -9,7 +9,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class SubCategory {
 
-    private Long id;
-    private String name;
-
+  private Long id;
+  private String name;
 }

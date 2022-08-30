@@ -1,10 +1,8 @@
 package pdi.project.com.example.recipeapi.domain;
 
-import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
