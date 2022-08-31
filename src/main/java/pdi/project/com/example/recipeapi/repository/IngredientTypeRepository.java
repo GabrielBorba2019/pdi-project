@@ -2,7 +2,6 @@ package pdi.project.com.example.recipeapi.repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import pdi.project.com.example.recipeapi.domain.IngredientType;

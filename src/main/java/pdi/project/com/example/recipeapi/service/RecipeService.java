@@ -1,5 +1,7 @@
 package pdi.project.com.example.recipeapi.service;
 
+import static java.util.Objects.isNull;
+
 import java.sql.Timestamp;
 import java.time.LocalTime;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +11,6 @@ import pdi.project.com.example.recipeapi.dto.RecipeDTO;
 import pdi.project.com.example.recipeapi.exception.CategoryInvalidExpection;
 import pdi.project.com.example.recipeapi.exception.RecipeValidationException;
 import pdi.project.com.example.recipeapi.repository.*;
-
-import static java.util.Objects.isNull;
 
 @Service
 public class RecipeService {
@@ -37,21 +37,21 @@ public class RecipeService {
 
   public Recipe addRecipe(RecipeDTO recipeDTO) {
 
-    if(isNull(recipeDTO)){
+    if (isNull(recipeDTO)) {
       throw new RecipeValidationException("Recipe cannot be null");
     }
     Recipe recipe = new Recipe();
 
-    if (isNull(recipeDTO.getCategoryId()) || isNull(recipeDTO.getSubCategoryId())){
-      throw  new CategoryInvalidExpection("Category or Subcategory id cannot be null");
+    if (isNull(recipeDTO.getCategoryId()) || isNull(recipeDTO.getSubCategoryId())) {
+      throw new CategoryInvalidExpection("Category or Subcategory id cannot be null");
     }
     categoryRepository.findById(recipeDTO.getCategoryId()).ifPresent(recipe::setCategory);
     subCategoryRepository.findById(recipeDTO.getSubCategoryId()).ifPresent(recipe::setSubCategory);
 
     recipe.setIngredients(ingredientService.createIngredientList(recipeDTO.getIngredients()));
 
-    if (isNull(recipeDTO.getName()) || recipeDTO.getName().isEmpty()){
-      throw  new RecipeValidationException("The name of Recipe cannot be null or empty");
+    if (isNull(recipeDTO.getName()) || recipeDTO.getName().isEmpty()) {
+      throw new RecipeValidationException("The name of Recipe cannot be null or empty");
     }
     recipe.setName(recipeDTO.getName());
     recipe.setPrepareTime(preperTime(recipeDTO.getPrepareTime()));
@@ -66,8 +66,8 @@ public class RecipeService {
 
   private LocalTime preperTime(String prepareTime) {
 
-    if(isNull(prepareTime) || prepareTime.isEmpty()){
-      throw new RecipeValidationException("Invalid prepare time");
+    if (isNull(prepareTime) || prepareTime.isEmpty()) {
+      throw new RecipeValidationException("Preper time cannot be null or empty");
     }
 
     String array[] = prepareTime.split(":", 3);
