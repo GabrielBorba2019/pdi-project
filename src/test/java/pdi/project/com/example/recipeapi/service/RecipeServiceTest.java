@@ -39,32 +39,11 @@ class RecipeServiceTest {
           stepInstructionService,
           ingredientService);
 
-  private final IngredientType GRAO_TYPE = new IngredientType(1L, "Grão");
   private final IngredientType CARNE_TYPE = new IngredientType(2L, "Carne");
   private final UnitOfMensurement UNIDADE = new UnitOfMensurement(1L, "Unidade");
-  private final UnitOfMensurement XICARA = new UnitOfMensurement(2L, "Xícara");
 
   private final StepInstruction FIRST_STEP =
       new StepInstruction(0l, 1, "First instruction description");
-  private final StepInstruction EMPTY_STEP = new StepInstruction(2l, 3, "");
-  private final StepInstruction NULL_STEP = new StepInstruction(null);
-
-  private final Ingredient INGREDIENT = new Ingredient(1L, "Lombo suíno", CARNE_TYPE, UNIDADE, "1");
-
-  private final Category MEAT_CATEGORY = new Category(1l, "carne");
-  private final SubCategory PORK_SUBCATEGORY = new SubCategory(1L, "suína");
-
-  private final Recipe cakeRecipe =
-      new Recipe(
-          1L,
-          null,
-          MEAT_CATEGORY,
-          PORK_SUBCATEGORY,
-          List.of(INGREDIENT),
-          List.of(FIRST_STEP),
-          null,
-          2,
-          null);
 
   @Test
   @DisplayName("Create recipe with null data")
