@@ -30,7 +30,7 @@ public class IngredientTypeRepository {
     return types.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
   }
 
-  public List<IngredientType> findAllById(List<Long> ids) {
+  public List<IngredientType> findAllByIds(List<Long> ids) {
     return types.stream().filter(type -> ids.contains(type.getId())).collect(Collectors.toList());
   }
 }

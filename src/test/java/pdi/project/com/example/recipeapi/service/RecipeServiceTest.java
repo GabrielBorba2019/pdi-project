@@ -9,8 +9,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import pdi.project.com.example.recipeapi.domain.*;
-import pdi.project.com.example.recipeapi.domain.Ingredient;
-import pdi.project.com.example.recipeapi.domain.Recipe;
 import pdi.project.com.example.recipeapi.domain.StepInstruction;
 import pdi.project.com.example.recipeapi.dto.IngredientDTO;
 import pdi.project.com.example.recipeapi.dto.RecipeDTO;
@@ -128,15 +126,18 @@ class RecipeServiceTest {
 
   @Test
   @DisplayName("Create Recipe without preper time")
-  void createRecipeWithoutPreperTime(){
-    //Given
+  void createRecipeWithoutPreperTime() {
+    // Given
     var instructionDTO = mockInstructionDTO(FIRST_STEP);
     var ingredientDTO = mockIngredientsDTO(CARNE_TYPE, UNIDADE);
 
-
-    RuntimeException exception = assertThrows(RecipeValidationException.class, () -> {
-      var recipe = service.addRecipe(mockRecipeDTO(1L, 2L, null , ingredientDTO, instructionDTO));
-    });
+    RuntimeException exception =
+        assertThrows(
+            RecipeValidationException.class,
+            () -> {
+              var recipe =
+                  service.addRecipe(mockRecipeDTO(1L, 2L, null, ingredientDTO, instructionDTO));
+            });
 
     String errorMessage = exception.getMessage();
 

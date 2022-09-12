@@ -40,8 +40,8 @@ public class IngredientService {
     List<Long> unitMeasureIds =
         ingredientsDTO.stream().map(IngredientDTO::getUnit).distinct().collect(Collectors.toList());
 
-    List<IngredientType> ingredientTypes = ingredientTypeRepository.findAllById(ingredientTypesIds);
-    List<UnitOfMensurement> unitOfMensurements = unitMeasureRepository.findAllById(unitMeasureIds);
+    List<IngredientType> ingredientTypes = ingredientTypeRepository.findAllByIds(ingredientTypesIds);
+    List<UnitOfMensurement> unitOfMensurements = unitMeasureRepository.findAllByIds(unitMeasureIds);
 
     List<Ingredient> ingredientList =
         ingredientsDTO.stream()

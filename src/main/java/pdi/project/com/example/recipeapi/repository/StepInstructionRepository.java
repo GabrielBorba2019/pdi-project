@@ -11,10 +11,6 @@ import pdi.project.com.example.recipeapi.domain.StepInstruction;
 public class StepInstructionRepository {
   private static final List<StepInstruction> instructions = new ArrayList<>();
 
-  //    //public StepInstructionRepository() {
-  //        instructions = new ArrayList<>();
-  //    }
-
   public StepInstruction addStepInstruction(StepInstruction instruction) {
     long id = instructions.size() + 1;
 

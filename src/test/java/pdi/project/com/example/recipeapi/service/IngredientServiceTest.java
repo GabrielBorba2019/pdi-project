@@ -70,8 +70,8 @@ class IngredientServiceTest {
     var ingredientsDto = mockIngredientsDTO(CARNE_TYPE, UNIDADE);
 
     // when
-    when(ingredientTypeRepository.findAllById(any())).thenReturn(List.of(GRAO_TYPE));
-    when(unitMeasureRepository.findAllById(any())).thenReturn(List.of(UNIDADE));
+    when(ingredientTypeRepository.findAllByIds(any())).thenReturn(List.of(GRAO_TYPE));
+    when(unitMeasureRepository.findAllByIds(any())).thenReturn(List.of(UNIDADE));
 
     // Then
     RuntimeException exception =
@@ -94,8 +94,8 @@ class IngredientServiceTest {
     ingredientsDto.setType(null);
 
     // when
-    when(ingredientTypeRepository.findAllById(any())).thenReturn(List.of(GRAO_TYPE));
-    when(unitMeasureRepository.findAllById(any())).thenReturn(List.of(UNIDADE));
+    when(ingredientTypeRepository.findAllByIds(any())).thenReturn(List.of(GRAO_TYPE));
+    when(unitMeasureRepository.findAllByIds(any())).thenReturn(List.of(UNIDADE));
 
     // Then
     RuntimeException exception =
@@ -117,8 +117,8 @@ class IngredientServiceTest {
     var ingredientsDto = mockIngredientsDTO(GRAO_TYPE, UNIDADE);
 
     // when
-    when(ingredientTypeRepository.findAllById(any())).thenReturn(List.of(GRAO_TYPE));
-    when(unitMeasureRepository.findAllById(any())).thenReturn(List.of(XICARA));
+    when(ingredientTypeRepository.findAllByIds(any())).thenReturn(List.of(GRAO_TYPE));
+    when(unitMeasureRepository.findAllByIds(any())).thenReturn(List.of(XICARA));
 
     // Then
     RuntimeException exception =
@@ -141,8 +141,8 @@ class IngredientServiceTest {
     ingredientsDto.setUnit(null);
 
     // when
-    when(ingredientTypeRepository.findAllById(any())).thenReturn(List.of(GRAO_TYPE));
-    when(unitMeasureRepository.findAllById(any())).thenReturn(List.of(UNIDADE));
+    when(ingredientTypeRepository.findAllByIds(any())).thenReturn(List.of(GRAO_TYPE));
+    when(unitMeasureRepository.findAllByIds(any())).thenReturn(List.of(UNIDADE));
 
     // Then
     RuntimeException exception =
@@ -165,8 +165,8 @@ class IngredientServiceTest {
     var ingredient = new Ingredient(1L, ingredientsDto.getName(), GRAO_TYPE, UNIDADE, "10");
 
     // when
-    when(ingredientTypeRepository.findAllById(any())).thenReturn(List.of(GRAO_TYPE));
-    when(unitMeasureRepository.findAllById(any())).thenReturn(List.of(UNIDADE));
+    when(ingredientTypeRepository.findAllByIds(any())).thenReturn(List.of(GRAO_TYPE));
+    when(unitMeasureRepository.findAllByIds(any())).thenReturn(List.of(UNIDADE));
     when(ingredientRepository.saveAll(any())).thenReturn(List.of(ingredient));
 
     // Then

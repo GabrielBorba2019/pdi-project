@@ -19,13 +19,8 @@ public class RecipeController {
     this.service = service;
   }
 
-  @GetMapping("/ping")
-  public String ping() {
-    return "pong";
-  }
-
-  @PostMapping("/add/recipe")
-  public ResponseEntity<?> creataRecipe(@RequestBody RecipeDTO recipeDTO) {
+  @PostMapping
+  public ResponseEntity<?> createRecipe(@RequestBody RecipeDTO recipeDTO) {
     Recipe recipe = service.addRecipe(recipeDTO);
 
     return new ResponseEntity<>(recipe, HttpStatus.CREATED);
