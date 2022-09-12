@@ -18,7 +18,7 @@ public class UnitMeasureRepository {
   public UnitMeasureRepository(List<UnitOfMensurement> units) {
     this.units = units;
 
-    units.addAll(List.of(kilo,unidade,colherDeSopa));
+    units.addAll(List.of(kilo, unidade, colherDeSopa));
   }
 
   public List<UnitOfMensurement> findAllByIds(List<Long> ids) {
