@@ -1,26 +1,15 @@
 package pdi.project.com.example.recipeapi.repository;
 
-import java.util.ArrayList;
-import java.util.List;
-import org.springframework.context.annotation.Scope;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import pdi.project.com.example.recipeapi.domain.Recipe;
 
 @Component
-@Scope("singleton")
-public class RecipeRepository {
-  private final List<Recipe> recipes;
+@Repository
+public interface RecipeRepository extends JpaRepository<Recipe, Long> {
 
-  public RecipeRepository() {
-    recipes = new ArrayList<>();
-  }
-
-  public Recipe addRecipe(Recipe recipe) {
-    long id = recipes.size() + 1;
-
-    recipe.setId(id);
-    recipes.add(recipe);
-
-    return recipe;
-  }
+    Optional<Recipe> findById(Long id);
 }

@@ -15,16 +15,8 @@ public class MapperToRecipe implements Mapper {
 
     @Override
     public Recipe toRecipe(RecipeDTO recipeDTO, List<Ingredient> ingredients,
-                           List<StepInstruction> stepInstructions) {
-        Recipe recipe = new Recipe();
-        recipe.setIngredients(ingredients);
-        recipe.setName(recipeDTO.getName());
-        recipe.setPrepareTime(preperTime(recipeDTO.getPrepareTime()));
-        recipe.setStepInstructions(stepInstructions);
-        recipe.setYield(4);
-        recipe.setDate(new Timestamp(System.currentTimeMillis()));
-
-        return recipe;
+                           List<Instruction> instructions) {
+        return null;
     }
 
     private LocalTime preperTime(String prepareTime) {
