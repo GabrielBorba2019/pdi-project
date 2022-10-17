@@ -14,7 +14,7 @@ public class RecipeDTO {
   private Long categoryId;
   private Long subCategoryId;
   private List<IngredientDTO> ingredients;
-  private List<StepInstructionDTO> stepInstructions;
+  private List<InstructionDTO> instructions;
   private String prepareTime;
   private Integer yield;
 }

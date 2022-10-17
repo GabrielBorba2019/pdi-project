@@ -24,13 +24,9 @@ public class Instruction {
 
   private String instruction;
 
-  @ManyToOne
+  @ManyToOne(cascade  = CascadeType.PERSIST)
   @JoinColumn(name = "recipe_id")
   @JsonIgnore
   private Recipe recipe;
 
-  public Instruction(Object o, int i, String first_instruction_description) {}
-
-  public Instruction(Object o) {
-  }
 }

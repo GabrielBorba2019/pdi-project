@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pdi.project.com.example.recipeapi.domain.Instruction;
-import pdi.project.com.example.recipeapi.domain.Recipe;
 import pdi.project.com.example.recipeapi.service.InstructionServiceV2;
 
 import java.util.List;

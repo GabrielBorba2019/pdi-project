@@ -3,7 +3,6 @@ package pdi.project.com.example.recipeapi.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pdi.project.com.example.recipeapi.domain.Ingredient;
-import pdi.project.com.example.recipeapi.repository.CategoryRepository;
 import pdi.project.com.example.recipeapi.repository.IngredientRepository;
 
 import java.util.List;
@@ -21,4 +20,5 @@ public class IngredientServiceV2 {
     public Ingredient findById(Long id){
         return ingredientRepository.findById(id).get();
     }
+
 }

@@ -3,11 +3,10 @@ package pdi.project.com.example.recipeapi.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pdi.project.com.example.recipeapi.domain.Category;
-import pdi.project.com.example.recipeapi.domain.Recipe;
 import pdi.project.com.example.recipeapi.repository.CategoryRepository;
-import pdi.project.com.example.recipeapi.repository.RecipeRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoryServiceV2 {
@@ -20,6 +19,7 @@ public class CategoryServiceV2 {
     }
 
     public Category findById(Long id){
-        return categoryRepository.findById(id).get();
+        Optional<Category> cat = categoryRepository.findById(id);
+        return cat.get();
     }
 }

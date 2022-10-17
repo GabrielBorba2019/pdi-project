@@ -2,10 +2,7 @@ package pdi.project.com.example.recipeapi.domain;
 
 import java.time.Instant;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -78,10 +75,6 @@ public class Recipe {
 
     public void setSubCategory(SubCategory subCategory) {
         this.subCategory = subCategory;
-    }
-
-    public void setIngredients(Set<Ingredient> ingredients) {
-        this.ingredients = ingredients;
     }
 
     public void setPrepareTime(LocalTime prepareTime) {

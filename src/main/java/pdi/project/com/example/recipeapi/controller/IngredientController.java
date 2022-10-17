@@ -2,14 +2,9 @@ package pdi.project.com.example.recipeapi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pdi.project.com.example.recipeapi.domain.Ingredient;
-import pdi.project.com.example.recipeapi.domain.Instruction;
 import pdi.project.com.example.recipeapi.service.IngredientServiceV2;
-import pdi.project.com.example.recipeapi.service.InstructionServiceV2;
 
 import java.util.List;
 
@@ -34,6 +29,4 @@ public class IngredientController {
   public ResponseEntity<Ingredient> findById(@PathVariable Long id){
     return ResponseEntity.ok().body(serviceV2.findById(id));
   }
-
-
 }

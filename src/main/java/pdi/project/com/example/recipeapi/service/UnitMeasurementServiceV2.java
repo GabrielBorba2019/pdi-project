@@ -2,9 +2,7 @@ package pdi.project.com.example.recipeapi.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pdi.project.com.example.recipeapi.domain.Recipe;
 import pdi.project.com.example.recipeapi.domain.UnitMeasurement;
-import pdi.project.com.example.recipeapi.repository.RecipeRepository;
 import pdi.project.com.example.recipeapi.repository.UnitMeasurementRepository;
 
 import java.util.List;

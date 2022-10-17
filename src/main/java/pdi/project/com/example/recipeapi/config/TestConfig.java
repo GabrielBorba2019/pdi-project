@@ -95,8 +95,9 @@ public class TestConfig implements CommandLineRunner {
         subCategoryRepository.saveAll(Arrays.asList(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12));
         unitMeasurementRepository.saveAll(Arrays.asList(u1,u2,u3,u4));
         ingredientRepository.saveAll(Arrays.asList(i1,i2,i3,i4,i5,i6,i7));
-        recipeRepository.saveAll(Arrays.asList(r1,r2));
         instructionRepository.saveAll(Arrays.asList(inst1,inst2,inst3,inst4,inst5,inst6,inst7,inst8,inst9));
+        recipeRepository.saveAll(Arrays.asList(r1,r2));
+
 
 
         r1.getIngredients().add(i1);

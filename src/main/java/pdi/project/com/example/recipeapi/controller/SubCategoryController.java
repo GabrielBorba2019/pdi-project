@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pdi.project.com.example.recipeapi.domain.Instruction;
 import pdi.project.com.example.recipeapi.domain.SubCategory;
-import pdi.project.com.example.recipeapi.service.InstructionServiceV2;
 import pdi.project.com.example.recipeapi.service.SubCategoryServiceV2;
 
 import java.util.List;
